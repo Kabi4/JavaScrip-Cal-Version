@@ -12,6 +12,8 @@ var oldSignOperation = "";
 
 var lastWasDigit=false;
 var myLastWasNeg=false;
+var first=true;
+var equals=false;
 
 function updateOperationLine(s){
 	switch(s){
@@ -21,13 +23,14 @@ function updateOperationLine(s){
 				if(intial_one!==0)intial_one = intial_one/10;
 			}
 			if(oldSign!==""){
-				display+=oldSign;
+				resultText.textContent+=oldSign;
 				oldSign="";
 			}
 			intial_one = intial_one*10+(1/one_decimal);
 			if(myLastWasNeg===true){myLastWasNeg=false;intial_one*=-1;}
-			displayText.textContent = display+intial_one;
+			displayText.textContent = intial_one;
 			lastWasDigit=true;
+			equals=false;
 			break;
 		case 2:
 			if(one_decimal_bool === true){
@@ -35,13 +38,14 @@ function updateOperationLine(s){
 				if(intial_one!==0)intial_one = intial_one/10;
 			}
 			if(oldSign!==""){
-				display+=oldSign;
+				resultText.textContent+=oldSign;
 				oldSign="";
 			}
 			intial_one = intial_one*10+(2/one_decimal);
 			if(myLastWasNeg===true){myLastWasNeg=false;intial_one*=-1;}
-			displayText.textContent = display+intial_one;
+			displayText.textContent = intial_one;
 			lastWasDigit=true;
+			equals=false;
 			break;
 		case 3:
 			if(one_decimal_bool === true){
@@ -49,13 +53,14 @@ function updateOperationLine(s){
 				if(intial_one!==0)intial_one = intial_one/10;
 			}
 			if(oldSign!==""){
-				display+=oldSign;
+				resultText.textContent+=oldSign;
 				oldSign="";
 			}
 			intial_one = intial_one*10+(3/one_decimal);
 			if(myLastWasNeg===true){myLastWasNeg=false;intial_one*=-1;}
-			displayText.textContent = display+intial_one;
+			displayText.textContent = intial_one;
 			lastWasDigit=true;
+			equals=false;
 			break;
 		case 4:
 			if(one_decimal_bool === true){
@@ -63,13 +68,14 @@ function updateOperationLine(s){
 				if(intial_one!==0)intial_one = intial_one/10;
 			}
 			if(oldSign!==""){
-				display+=oldSign;
+				resultText.textContent+=oldSign;
 				oldSign="";
 			}
 			intial_one = intial_one*10+(4/one_decimal);
 			if(myLastWasNeg===true){myLastWasNeg=false;intial_one*=-1;}
-			displayText.textContent = display+intial_one;
+			displayText.textContent = intial_one;
 			lastWasDigit=true;
+			equals=false;
 			break;
 		case 5:
 			if(one_decimal_bool === true){
@@ -77,13 +83,14 @@ function updateOperationLine(s){
 				if(intial_one!==0)intial_one = intial_one/10;
 			}
 			if(oldSign!==""){
-				display+=oldSign;
+				resultText.textContent+=oldSign;
 				oldSign="";
 			}
 			intial_one = intial_one*10+(5/one_decimal);
 			if(myLastWasNeg===true){myLastWasNeg=false;intial_one*=-1;}
-			displayText.textContent = display+intial_one;
+			displayText.textContent = intial_one;
 			lastWasDigit=true;
+			equals=false;
 			break;
 		case 6:
 			if(one_decimal_bool === true){
@@ -91,13 +98,14 @@ function updateOperationLine(s){
 				if(intial_one!==0)intial_one = intial_one/10;
 			}
 			if(oldSign!==""){
-				display+=oldSign;
+				resultText.textContent+=oldSign;
 				oldSign="";
 			}
 			intial_one = intial_one*10+(6/one_decimal);
 			if(myLastWasNeg===true){myLastWasNeg=false;intial_one*=-1;}
-			displayText.textContent = display+intial_one;
+			displayText.textContent = intial_one;
 			lastWasDigit=true;
+			equals=false;
 			break;
 		case 7:
 			if(one_decimal_bool === true){
@@ -105,13 +113,14 @@ function updateOperationLine(s){
 				if(intial_one!==0)intial_one = intial_one/10;
 			}
 			if(oldSign!==""){
-				display+=oldSign;
+				resultText.textContent+=oldSign;
 				oldSign="";
 			}
 			intial_one = intial_one*10+(7/one_decimal);
 			if(myLastWasNeg===true){myLastWasNeg=false;intial_one*=-1;}
-			displayText.textContent = display+intial_one;
+			displayText.textContent = intial_one;
 			lastWasDigit=true;
+			equals=false;
 			break;
 		case 8:
 			if(one_decimal_bool === true){
@@ -119,13 +128,14 @@ function updateOperationLine(s){
 				if(intial_one!==0)intial_one = intial_one/10;
 			}
 			if(oldSign!==""){
-				display+=oldSign;
+				resultText.textContent+=oldSign;
 				oldSign="";
 			}
 			intial_one = intial_one*10+(8/one_decimal);
 			if(myLastWasNeg===true){myLastWasNeg=false;intial_one*=-1;}
-			displayText.textContent = display+intial_one;
+			displayText.textContent = intial_one;
 			lastWasDigit=true;
+			equals=false;
 			break;
 		case 9:
 			if(one_decimal_bool === true){
@@ -133,33 +143,36 @@ function updateOperationLine(s){
 				if(intial_one!==0)intial_one = intial_one/10;
 			}
 			if(oldSign!==""){
-				display+=oldSign;
+				resultText.textContent+=oldSign;
 				oldSign="";
 			}
 			intial_one = intial_one*10+(9/one_decimal);
 			if(myLastWasNeg===true){myLastWasNeg=false;intial_one*=-1;}
-			displayText.textContent = display+intial_one;
+			displayText.textContent = intial_one;
 			lastWasDigit=true;
+			equals=false;
 			break;
 		case 0:
 			if(one_decimal_bool === true){
 				one_decimal=one_decimal*10;
 				if(myLastWasNeg===true){myLastWasNeg=false;intial_one*=-1;}
-				displayText.textContent = display + intial_one.toPrecision(Math.log10(one_decimal)+1);
+				displayText.textContent = intial_one.toPrecision(Math.log10(one_decimal)+1);
 				 
 			}
 			else{if(myLastWasNeg===true){myLastWasNeg=false;intial_one*=-1;}
 				intial_one = intial_one*10+(0/one_decimal);
-			displayText.textContent = display+intial_one;}
+			displayText.textContent = intial_one;}
 			if(oldSign!==""){
-				display+=oldSign;
+				resultText.textContent+=oldSign;
 				oldSign="";
 			}
 			lastWasDigit=true;
+			equals=false;
 			break;
 		case '/':
 			if(myLastWasNeg===true){myLastWasNeg=false;}
 			if(lastWasDigit===true && oldSignOperation!==""){
+			if(resultText.textContent==="0"){resultText.textContent=intial_one;}else{resultText.textContent+=intial_one;}
 				switch(oldSignOperation){
 				case "X":
 					intial_other = intial_other*intial_one;
@@ -177,12 +190,12 @@ function updateOperationLine(s){
 					intial_other=intial_other;
 					break	
 			}
-			resultText.textContent=intial_other;
 			oldSignOperation="";
 			oldSign="";
 			intial_one=intial_other;
 			}
 			if(oldSign===""){
+			if(first){first=false;resultText.textContent=intial_one;}
 			intial_other=intial_one;
 			intial_one=0;
 			one_decimal = 1;
@@ -196,10 +209,12 @@ function updateOperationLine(s){
 				oldSignOperation="/";
 			}
 			lastWasDigit=false;
+			displayText.textContent="/";
 			break;
 		case '*':
 			if(myLastWasNeg===true){myLastWasNeg=false;}
 			if(lastWasDigit===true && oldSignOperation!==""){
+			if(resultText.textContent==="0"){resultText.textContent=intial_one;}else{resultText.textContent+=intial_one;}
 				switch(oldSignOperation){
 				case "X":
 					intial_other = intial_other*intial_one;
@@ -217,12 +232,12 @@ function updateOperationLine(s){
 					intial_other=intial_other;
 					break	
 			}
-			resultText.textContent=intial_other;
 			oldSignOperation="";
 			oldSign="";
 			intial_one=intial_other;
 			}
 			if(oldSign===""){
+			if(first){first=false;resultText.textContent=intial_one;}
 			intial_other=intial_one;
 			intial_one=0;
 			one_decimal = 1;
@@ -236,9 +251,11 @@ function updateOperationLine(s){
 				oldSignOperation="X";
 			}
 			lastWasDigit=false;
+			displayText.textContent="X";
 			break;
 		case '-':
 			if(lastWasDigit===true && oldSignOperation!==""){
+			if(resultText.textContent==="0"){resultText.textContent=intial_one;}else{resultText.textContent+=intial_one;}
 				switch(oldSignOperation){
 				case "X":
 					intial_other = intial_other*intial_one;
@@ -256,12 +273,12 @@ function updateOperationLine(s){
 					intial_other=intial_other;
 					break	
 			}
-			resultText.textContent=intial_other;
 			oldSignOperation="";
 			oldSign="";
 			intial_one=intial_other;
 			}
 			if(oldSign===""){
+			if(first){first=false;resultText.textContent=intial_one;}
 			intial_other=intial_one;
 			intial_one=0;
 			one_decimal = 1;
@@ -274,10 +291,12 @@ function updateOperationLine(s){
 				myLastWasNeg=true;
 			}
 			lastWasDigit=false;
+			displayText.textContent="-";
 			break;
 		case '+':
 			if(myLastWasNeg===true){myLastWasNeg=false;}
 			if(lastWasDigit===true && oldSignOperation!==""){
+			if(resultText.textContent==="0"){resultText.textContent=intial_one;}else {resultText.textContent+=intial_one;}
 				switch(oldSignOperation){
 				case "X":
 					intial_other = intial_other*intial_one;
@@ -295,12 +314,12 @@ function updateOperationLine(s){
 					intial_other=intial_other;
 					break	
 			}
-			resultText.textContent=intial_other;
 			oldSignOperation="";
 			oldSign="";
 			intial_one=intial_other;
 			}
 			if(oldSign===""){
+			if(first){first=false;resultText.textContent=intial_one;}
 			intial_other=intial_one;
 			intial_one=0;
 			one_decimal = 1;
@@ -314,11 +333,13 @@ function updateOperationLine(s){
 				oldSignOperation="+";
 			}
 			lastWasDigit=false;
+			displayText.textContent="+";
 			break;
 		case '.':
 			one_decimal_bool = true;
 			break;
 		case 'AC':
+			first=true;
 			lastWasDigit=false
 			one_decimal_bool = false;
 			intial_one=0;
@@ -331,6 +352,7 @@ function updateOperationLine(s){
 			oldSignOperation = "";
 			break;
 		case '=':
+			if(resultText.textContent==="0"){resultText.textContent=intial_one;}else if(!equals){resultText.textContent+=intial_one;}
 			switch(oldSignOperation){
 				case "X":
 					intial_other = intial_other*intial_one;
@@ -351,7 +373,7 @@ function updateOperationLine(s){
 			displayText.textContent=intial_other;
 			oldSignOperation="";
 			intial_one=intial_other;
+			equals=true;
 			break
 	}
-	display=""
 }
