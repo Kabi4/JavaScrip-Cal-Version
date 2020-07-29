@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Calculator</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+	</head>
+	<body style="padding-top:10%; background-color:gray;" class="align-middle">
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+		<div style="font-family: 'Orbitron', sans-serif;" class="container-fluid">
+			<div class="row-12">
+			<h2 class="text-center">Calculator JavaScript</h2>
+			</div>
+			<div style="padding-left:30%;" class="row">
+			<div class="col-5">
+			<h4  class="btn btn-danger btn-block text-right" ><span  class="operation" id="display">0</span></h4>
+			<span style="font-size:30px;display:none;" class="result" id="display"></span>
+			</div>
+			<div class="col-3">
+			<h4 onclick="updateOperationLine('=')" class="btn btn-success btn-block" id="equals">=</h4>
+			</div>
+			</div>
+			</h4>
+			<div style="padding-left:30%;" class="row">
+				<div class="col-2">
+					<h4 onclick="updateOperationLine('AC')" class="btn btn-danger btn-block" id="clear">AC</h4>
+					<h4 onclick="updateOperationLine('/')" class="btn btn-secondary btn-block" id="divide">/</h4>
+					<h4 onclick="updateOperationLine('*')" class="btn btn-secondary btn-block" id="multiply">X</h4>
+				</div>
+				<div class="col-2">
+			<h4 onclick="updateOperationLine(0)" class="btn btn-primary btn-block" id="zero">0</h4>
+			<h4 onclick="updateOperationLine(1)" class="btn btn-primary btn-block" id="one">1</h4>
+			<h4 onclick="updateOperationLine(2)" class="btn btn-primary btn-block" id="two">2</h4>
+				</div>
+				<div class="col-2">
+			<h4 onclick="updateOperationLine(3)" class="btn btn-primary btn-block" id="three">3</h4>
+			<h4 onclick="updateOperationLine(4)" class="btn btn-primary btn-block" id="four">4</h4>
+			<h4 onclick="updateOperationLine(5)" class="btn btn-primary btn-block" id="five">5</h4>
+				</div>
+				<div class="col-2">
+			<h4 onclick="updateOperationLine(6)" class="btn btn-primary btn-block" id="six">6</h4>
+			<h4 onclick="updateOperationLine(7)" class="btn btn-primary btn-block" id="seven">7</h4>
+			<h4 onclick="updateOperationLine(8)" class="btn btn-primary btn-block" id="eight">8</h4>
+				</div>
+			</div>
+			<div style="padding-left:30%;" class="row">
+				<div class="col-2">
+			<h4 onclick="updateOperationLine('+')" class="btn btn-secondary btn-block" id="add">+</h4>
+			</div>
+			<div class="col-2">
+			<h4 onclick="updateOperationLine('-')" class="btn btn-secondary btn-block" id="subtract">-</h4>
+			</div>
+			<div class="col-2">
+			<h4 onclick="updateOperationLine(9)" class="btn btn-primary btn-block" id="nine">9</h4>
+			</div>
+			<div class="col-2">
+			<h4 onclick="updateOperationLine('.')" class="btn btn-secondary btn-block" id="decimal">.</h4>
+			</div>
+			</div>
+			</div>
+		</div>
+	</body>
+  <script src="JS.js" defer></script>	
+</html>
